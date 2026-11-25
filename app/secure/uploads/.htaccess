@@ -1,0 +1,11 @@
+# [보완 6] 업로드 폴더에서 스크립트 실행 차단
+# 확장자/MIME 검사를 뚫고 .php 가 저장되더라도 여기서 실행이 막힙니다.
+
+<FilesMatch "\.(php|php3|php4|php5|php7|phtml|pht|phar)$">
+    Require all denied
+</FilesMatch>
+
+# PHP 엔진 자체를 꺼 두는 2차 방어 (mod_php 환경)
+<IfModule mod_php.c>
+    php_admin_flag engine off
+</IfModule>

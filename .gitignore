@@ -1,0 +1,14 @@
+# 업로드된 파일(실습 중 생성물)은 커밋하지 않음 — 폴더 구조만 유지
+app/vulnerable/uploads/*
+app/secure/uploads/*
+!app/vulnerable/uploads/.gitkeep
+!app/secure/uploads/.gitkeep
+!app/secure/uploads/.htaccess
+
+# 비밀값 — 실제 .env 는 커밋 금지 (.env.example 만 올림)
+.env
+
+# OS / 편집기
+.DS_Store
+Thumbs.db
+*~
